@@ -27,6 +27,4 @@ public class Histograma {
 		}
 		return cantSolucitudes;
 	}	
-	
-	// Comentario de prueba para ver si anda git.
 }
