@@ -1,4 +1,8 @@
 import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Test;
 
 public class HistogramaTest {
@@ -6,9 +10,14 @@ public class HistogramaTest {
 	
 	@Test
 	public void cantMateriasSolicitantes1() {
-		histograma.agregarSolicitud("a", "lunes", 8, 10);
-		histograma.agregarSolicitud("b", "lunes", 9, 11);
-		histograma.agregarSolicitud("c", "lunes", 8, 12);		
+		Solicitud s1 = new Solicitud("a", "lunes", 8, 10);
+		histograma.agregarSolicitud(s1);
+		
+		Solicitud s2 = new Solicitud("b", "lunes", 9, 11);
+		histograma.agregarSolicitud(s2);
+		
+		Solicitud s3 = new Solicitud("c", "lunes", 8, 12);
+		histograma.agregarSolicitud(s3);		
 	
 		// Horarios normales.
 		assertEquals(0,histograma.cantMateriasSolicitantes("lunes", 7));
@@ -25,4 +34,5 @@ public class HistogramaTest {
 		assertNotEquals(3,histograma.cantMateriasSolicitantes("martes", 9));
 		assertNotEquals(3,histograma.cantMateriasSolicitantes("martes", 10));
 	}
+	
 }

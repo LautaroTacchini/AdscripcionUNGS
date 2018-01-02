@@ -10,21 +10,42 @@ public class Histograma {
 	}
 	
 	// Agrega una solicitud al histograma.
-	public void agregarSolicitud(String materia, String dia, int hrIni, int hrFin){
-		solicitudes.add(new Solicitud(materia,dia,hrIni,hrFin));
+	public void agregarSolicitud(Solicitud solicitud){
+		solicitudes.add(solicitud);
 	}
 	
-	// Dado un dia, con un horario de inicio y de fin,
-	// devuelve todas las materia que solicitaron ese horario.	
-	public int cantMateriasSolicitantes(String dia, int hrIni){
+	// Dado un dia, con un horario de inicio,
+	// devuelve la cantidad de materias que solicitaron ese horario.	
+	public int cantMateriasSolicitantes(String dia, int hora){
 		int cantSolucitudes = 0;
 		for(Solicitud s : solicitudes) {
-			if(s.getDia().equals(dia)){
-				if(s.getHrIni() <= hrIni && s.getHrFin() >= hrIni+1){
+			if(s.getDia().equals(dia) && s.getHrIni() <= hora && s.getHrFin() >= hora+1){
 					cantSolucitudes++;
 				}
-			}
-		}
+		}		
 		return cantSolucitudes;
-	}	
+	}
+	
+	public List<Integer> cantDeMateriasPorDia(String dia){
+		List<Integer> cantMateriasPorHora = new ArrayList<Integer>();
+		
+		for(int i=0; i<=23; i++){
+			cantMateriasPorHora.add(cantMateriasSolicitantes(dia,i));
+		}
+		
+		return cantMateriasPorHora;
+	}
+	
+	public String imprimir(String dia){
+		String ret = dia;
+		
+		List<Integer> cantMaterias = cantDeMateriasPorDia(dia);
+		for(int indice =0; indice< cantMaterias.size();indice++){
+		//for(Integer i : cantMaterias)
+			ret = ret + " " +cantMaterias.get(indice);
+		}
+		
+		return ret;
+	}
+	
 }

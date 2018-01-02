@@ -21,10 +21,13 @@ public class Solicitud {
 	// en especifico con una horar de inicio y de fin.
 	public Solicitud(String materia, String dia, int hrIni, int hrFin){
 		this.materia = materia;
+		
 		assert dias.contains(dia);
 		this.dia = dia;
+		
 		assert horaValida(hrIni);
 		this.hrIni = hrIni;
+		
 		assert horaValida(hrFin);
 		this.hrFin = hrFin;
 	}
