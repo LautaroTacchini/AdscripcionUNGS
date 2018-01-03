@@ -16,7 +16,7 @@ public class Histograma {
 	
 	// Dado un dia, con un horario de inicio,
 	// devuelve la cantidad de materias que solicitaron ese horario.	
-	public int cantMateriasSolicitantes(String dia, int hora){
+	public int cantSolicitudes(String dia, int hora){
 		int cantSolucitudes = 0;
 		for(Solicitud s : solicitudes) {
 			if(s.getDia().equals(dia) && s.getHrIni() <= hora && s.getHrFin() >= hora+1){
@@ -26,11 +26,11 @@ public class Histograma {
 		return cantSolucitudes;
 	}
 	
-	public List<Integer> cantDeMateriasPorDia(String dia){
+	public List<Integer> cantPorHora(String dia){
 		List<Integer> cantMateriasPorHora = new ArrayList<Integer>();
 		
 		for(int i=0; i<=23; i++){
-			cantMateriasPorHora.add(cantMateriasSolicitantes(dia,i));
+			cantMateriasPorHora.add(cantSolicitudes(dia,i));
 		}
 		
 		return cantMateriasPorHora;
@@ -39,9 +39,9 @@ public class Histograma {
 	public String imprimir(String dia){
 		String ret = dia;
 		
-		List<Integer> cantMaterias = cantDeMateriasPorDia(dia);
-		for(int indice =0; indice< cantMaterias.size();indice++){
+		List<Integer> cantMaterias = cantPorHora(dia);
 		//for(Integer i : cantMaterias)
+		for(int indice =0; indice< cantMaterias.size();indice++){
 			ret = ret + " " +cantMaterias.get(indice);
 		}
 		
