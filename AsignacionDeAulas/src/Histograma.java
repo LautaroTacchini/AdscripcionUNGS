@@ -40,7 +40,7 @@ public class Histograma {
 		String ret = dia;
 		
 		List<Integer> cantMaterias = cantDeMateriasPorDia(dia);
-		for(int indice =0; indice< cantMaterias.size();indice++){
+		for(int indice = 0; indice < cantMaterias.size();indice++){
 		//for(Integer i : cantMaterias)
 			ret = ret + " " +cantMaterias.get(indice);
 		}
