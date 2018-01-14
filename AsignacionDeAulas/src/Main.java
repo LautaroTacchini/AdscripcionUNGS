@@ -13,7 +13,7 @@ public class Main {
 		histograma.agregarSolicitud(s3);
 		
 		System.out.println(histograma.mostrarSolicitudes("lunes"));
-		System.out.println(histograma.imprimir("lunes"));
+		System.out.println(histograma.mostrarHoraMasSolicitada("martes"));
 	}
 
 }

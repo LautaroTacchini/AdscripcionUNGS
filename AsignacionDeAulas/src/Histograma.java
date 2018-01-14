@@ -38,6 +38,17 @@ public class Histograma {
 		return cantMateriasPorHora;
 	}
 	
+		
+	// Devuelve un String con todos los horarios de un dia.
+	public String mostrarSolicitudes(String dia){
+		String ret = dia;
+		List<Integer> cantMaterias = cantSolicitudesPorHora(dia);
+		for(int indice = 0; indice < cantMaterias.size();indice++){
+			ret = ret + " " +cantMaterias.get(indice);
+		}
+		return ret;
+	}
+	
 	private int maxHrSolicitudes(String dia){
 		List<Integer> cantMateriasPorHora = cantSolicitudesPorHora(dia);
 		int max = 0; 
@@ -61,20 +72,9 @@ public class Histograma {
 		return indice;
 	}
 	
-	public String imprimir(String dia){
-		String ret = dia + " " +Integer.toString(horaMasSolicitada(dia))+"Hrs"
-						 + "  Cant. de Solicitudes: " +Integer.toString(maxHrSolicitudes(dia));
+	public String mostrarHoraMasSolicitada(String dia){
+		String ret = dia + " " +Integer.toString(horaMasSolicitada(dia)) + "Hrs"
+						 + "  Cant. de Solicitudes: " + Integer.toString(maxHrSolicitudes(dia));
 		return ret;
 	}
-	
-	// Devuelve un String con todos los horarios de un dia.
-	public String mostrarSolicitudes(String dia){
-		String ret = dia;
-		List<Integer> cantMaterias = cantSolicitudesPorHora(dia);
-		for(int indice = 0; indice < cantMaterias.size();indice++){
-			ret = ret + " " +cantMaterias.get(indice);
-		}
-		return ret;
-	}
-	
 }
