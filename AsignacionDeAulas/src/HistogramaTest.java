@@ -6,7 +6,7 @@ public class HistogramaTest {
 	Histograma histograma = new Histograma();
 	
 	@Test
-	public void cantMateriasSolicitantesTestBasico() {
+	public void cantMateriasTestBasico() {
 		Solicitud s1 = new Solicitud("a", "lunes", 8, 10);
 		histograma.agregarSolicitud(s1);
 		
@@ -17,14 +17,14 @@ public class HistogramaTest {
 		histograma.agregarSolicitud(s3);		
 	
 		// Horarios normales.
-		assertEquals(0,histograma.cantMateriasSolicitantes("lunes", 7));
-		assertEquals(2,histograma.cantMateriasSolicitantes("lunes", 8));
-		assertEquals(3,histograma.cantMateriasSolicitantes("lunes", 9));
-		assertEquals(2,histograma.cantMateriasSolicitantes("lunes", 10));
-		assertEquals(1,histograma.cantMateriasSolicitantes("lunes", 11));
-		assertEquals(0,histograma.cantMateriasSolicitantes("lunes", 12));
-		assertEquals(2,histograma.cantMateriasSolicitantes("lunes", 8));
-		assertEquals(3,histograma.cantMateriasSolicitantes("lunes", 9));	
+		assertEquals(0,histograma.cantMaterias("lunes", 7));
+		assertEquals(2,histograma.cantMaterias("lunes", 8));
+		assertEquals(3,histograma.cantMaterias("lunes", 9));
+		assertEquals(2,histograma.cantMaterias("lunes", 10));
+		assertEquals(1,histograma.cantMaterias("lunes", 11));
+		assertEquals(0,histograma.cantMaterias("lunes", 12));
+		assertEquals(2,histograma.cantMaterias("lunes", 8));
+		assertEquals(3,histograma.cantMaterias("lunes", 9));	
 	}
 		
 }
