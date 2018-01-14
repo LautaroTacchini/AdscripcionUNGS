@@ -26,5 +26,5 @@ public class HistogramaTest {
 		assertEquals(2,histograma.cantSolicitudes("lunes", 8));
 		assertEquals(3,histograma.cantSolicitudes("lunes", 9));	
 	}
-		
+
 }
