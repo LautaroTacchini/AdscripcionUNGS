@@ -17,14 +17,14 @@ public class HistogramaTest {
 		histograma.agregarSolicitud(s3);		
 	
 		// Horarios normales.
-		assertEquals(0,histograma.cantMaterias("lunes", 7));
-		assertEquals(2,histograma.cantMaterias("lunes", 8));
-		assertEquals(3,histograma.cantMaterias("lunes", 9));
-		assertEquals(2,histograma.cantMaterias("lunes", 10));
-		assertEquals(1,histograma.cantMaterias("lunes", 11));
-		assertEquals(0,histograma.cantMaterias("lunes", 12));
-		assertEquals(2,histograma.cantMaterias("lunes", 8));
-		assertEquals(3,histograma.cantMaterias("lunes", 9));	
+		assertEquals(0,histograma.cantSolicitudes("lunes", 7));
+		assertEquals(2,histograma.cantSolicitudes("lunes", 8));
+		assertEquals(3,histograma.cantSolicitudes("lunes", 9));
+		assertEquals(2,histograma.cantSolicitudes("lunes", 10));
+		assertEquals(1,histograma.cantSolicitudes("lunes", 11));
+		assertEquals(0,histograma.cantSolicitudes("lunes", 12));
+		assertEquals(2,histograma.cantSolicitudes("lunes", 8));
+		assertEquals(3,histograma.cantSolicitudes("lunes", 9));	
 	}
 		
 }

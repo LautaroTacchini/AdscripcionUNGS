@@ -12,6 +12,7 @@ public class Main {
 		histograma.agregarSolicitud(s2);
 		histograma.agregarSolicitud(s3);
 		
+		System.out.println(histograma.mostrarSolicitudes("lunes"));
 		System.out.println(histograma.imprimir("lunes"));
 	}
 
