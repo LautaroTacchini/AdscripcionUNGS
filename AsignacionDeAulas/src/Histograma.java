@@ -26,6 +26,8 @@ public class Histograma {
 		return cantSolucitudes;
 	}
 	
+	// Dado un dia de la semana, devuelve todos los horarios,
+	// solicitados.
 	public List<Integer> cantDeMateriasPorDia(String dia){
 		List<Integer> cantMateriasPorHora = new ArrayList<Integer>();
 		
@@ -40,7 +42,6 @@ public class Histograma {
 		String ret = dia;
 		List<Integer> cantMaterias = cantDeMateriasPorDia(dia);
 		for(int indice = 0; indice < cantMaterias.size();indice++){
-		//for(Integer i : cantMaterias)
 			ret = ret + " " +cantMaterias.get(indice);
 		}
 		return ret;
