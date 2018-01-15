@@ -47,5 +47,12 @@ public class Solicitud {
 	public int getHrFin() {
 		return hrFin;
 	}
+	
+	@Override
+	public String toString() {
+		String ret = "";
+		ret = materia + dia + hrIni + hrFin;
+		return ret;
+	}
 }
 	

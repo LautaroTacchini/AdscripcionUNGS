@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 	
@@ -17,10 +19,11 @@ public class Main {
 		System.out.println(histograma.mostrarSolicitudes("lunes"));
 		System.out.println(ch.mostrarHoraMasSolicitada("lunes"));
 		
-		
-		CSVReader reader = new CSVReader ("pedidos.csv");
-		System.out.println(reader.leerCSV());
-		
+		//reader llama al parser, y en el resultado del reader obtengo la lista.
+		List<Solicitud> solicitudes = new ArrayList<>();
+		CSVParser parser = new CSVParser(solicitudes);
+		CSVReader reader = new CSVReader("pedidos.csv",parser);
+		reader.read();				
 	}
 
 }
