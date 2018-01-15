@@ -26,10 +26,5 @@ public class HistogramaTest {
 		assertEquals(2,histograma.cantSolicitudes("lunes", 8));
 		assertEquals(3,histograma.cantSolicitudes("lunes", 9));	
 	}
-	
-	public void cantSolicitudesTest2() {
-		assertNotEquals(3,histograma.cantSolicitudes("martes", 9));
-		assertNotEquals(3,histograma.cantSolicitudes("martes", 10));
-	}
-	
+
 }
