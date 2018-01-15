@@ -7,8 +7,8 @@ public class Solicitud {
 	private String materia;
 	private String dia;
 	
-	int hrIni;
-	int hrFin;
+	private int hrIni;
+	private int hrFin;
 	
 	static String[] arrayDias = {"domingo","lunes","martes","miercoles","jueves","viernes","sabado"};
 	static Set<String> dias = new HashSet<>(Arrays.asList(arrayDias));

@@ -12,8 +12,10 @@ public class Main {
 		histograma.agregarSolicitud(s2);
 		histograma.agregarSolicitud(s3);
 		
+		CalculadorHistograma ch = new CalculadorHistograma(histograma);
+		
 		System.out.println(histograma.mostrarSolicitudes("lunes"));
-		System.out.println(histograma.mostrarHoraMasSolicitada("lunes"));
+		System.out.println(ch.mostrarHoraMasSolicitada("lunes"));
 	}
 
 }

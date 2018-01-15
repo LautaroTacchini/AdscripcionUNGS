@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Histograma {
 	
-	List<Solicitud> solicitudes;
+	private List<Solicitud> solicitudes;
 	
 	// Represeta todas las solicitudes registradas.
 	public Histograma(){
@@ -39,8 +39,6 @@ public class Histograma {
 		return cantMateriasPorHora;
 	}
 	
-		
-
 	// Devuelve un String con todos los horarios de un dia.
 	public String mostrarSolicitudes(String dia){
 		String ret = dia;
@@ -50,34 +48,4 @@ public class Histograma {
 		}
 		return ret;
 	}
-	
-	private int maxHrSolicitudes(String dia){
-		List<Integer> cantMateriasPorHora = cantSolicitudesPorHora(dia);
-		int max = 0; 
-		for (int i=0; i< cantMateriasPorHora.size();i++){
-			if(max<cantMateriasPorHora.get(i))
-				max = cantMateriasPorHora.get(i);
-		}
-		return max;
-	}
-	
-	private int horaMasSolicitada(String dia){
-		List<Integer> cantMateriasPorHora = cantSolicitudesPorHora(dia);
-		int max = 0; 
-		int indice = 0;
-		for (int i=0; i < cantMateriasPorHora.size();i++){
-			if(max < cantMateriasPorHora.get(i)){
-				max = cantMateriasPorHora.get(i);
-				indice = i;
-			}
-		}
-		return indice;
-	}
-	
-	public String mostrarHoraMasSolicitada(String dia){
-		String ret = dia + " " +Integer.toString(horaMasSolicitada(dia)) + "Hrs"
-						 + "  Cant. de Solicitudes: " + Integer.toString(maxHrSolicitudes(dia));
-		return ret;
-	}
-
 }
