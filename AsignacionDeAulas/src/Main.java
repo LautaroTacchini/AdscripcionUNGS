@@ -16,6 +16,11 @@ public class Main {
 		
 		System.out.println(histograma.mostrarSolicitudes("lunes"));
 		System.out.println(ch.mostrarHoraMasSolicitada("lunes"));
+		
+		
+		CSVReader reader = new CSVReader ("pedidos.csv");
+		System.out.println(reader.leerCSV());
+		
 	}
 
 }
