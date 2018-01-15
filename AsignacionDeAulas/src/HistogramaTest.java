@@ -6,7 +6,7 @@ public class HistogramaTest {
 	Histograma histograma = new Histograma();
 	
 	@Test
-	public void cantMateriasSolicitantes1() {
+	public void cantSolicitudesTestBasico() {
 		Solicitud s1 = new Solicitud("a", "lunes", 8, 10);
 		histograma.agregarSolicitud(s1);
 		
@@ -27,7 +27,7 @@ public class HistogramaTest {
 		assertEquals(3,histograma.cantSolicitudes("lunes", 9));	
 	}
 	
-	public void cantMateriasSolicitantes2() {
+	public void cantSolicitudesTest2() {
 		assertNotEquals(3,histograma.cantSolicitudes("martes", 9));
 		assertNotEquals(3,histograma.cantSolicitudes("martes", 10));
 	}

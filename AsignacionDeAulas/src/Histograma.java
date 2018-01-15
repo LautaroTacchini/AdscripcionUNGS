@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Histograma {
+	
 	List<Solicitud> solicitudes;
 	
 	// Represeta todas las solicitudes registradas.
@@ -40,12 +41,11 @@ public class Histograma {
 		String ret = dia;
 		
 		List<Integer> cantMaterias = cantPorHora(dia);
-		//for(Integer i : cantMaterias)
 		for(int indice =0; indice< cantMaterias.size();indice++){
 			ret = ret + " " +cantMaterias.get(indice);
 		}
-		
 		return ret;
 	}
+	
 	
 }
