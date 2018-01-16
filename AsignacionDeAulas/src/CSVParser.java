@@ -18,7 +18,6 @@ public class CSVParser {
 		
 		Solicitud s = new Solicitud(nombre,dia,hrIni,hrFin);
 		solicitudes.add(s);
-		
 	}
 
 	private int parsearHora(String[] datos, int indice) {
@@ -36,7 +35,7 @@ public class CSVParser {
 		return result;
 	}
 	
-	public Solicitud getSolicitud(int numeroDeSolicitud) {
-		return solicitudes.get(numeroDeSolicitud);
+	public List<Solicitud> getSolicitudes() {
+		return solicitudes;
 	}
 }

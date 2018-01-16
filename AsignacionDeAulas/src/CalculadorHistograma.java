@@ -29,7 +29,7 @@ public class CalculadorHistograma {
 	}
 	
 	// Devuelve la cantidad maxima de solicitudes en un dia.
-	private int maxHrSolicitudes(String dia){
+	private int maxSolicitudes(String dia){
 		int horaMasSolicitada = horaMasSolicitada(dia);
 		int cantSolicitudes = histograma.cantSolicitudes(dia, horaMasSolicitada);
 		return cantSolicitudes;
@@ -52,27 +52,54 @@ public class CalculadorHistograma {
 	
 	// Muestra la hora mas solicitada con su respectiva cantidad,
 	// de solicitudes.
-	public String mostrarHoraMasSolicitada(String dia){
+	public String mostrarHrMasSolicitada(String dia){
 		String ret = dia + " " +Integer.toString(horaMasSolicitada(dia)) + "Hrs"
-						 + "  Cant. de Solicitudes: " + Integer.toString(maxHrSolicitudes(dia));
+						 + "  Cant. de Solicitudes: " + Integer.toString(maxSolicitudes(dia));
 		return ret;
 	}
 	
-	public List<String> horasSemanalesMasSolicitadas() {
+	// Devuelve una lista con las solicitudes por hora de todos los
+	// dias de la semana.
+	public List<String> solicitudesSemanales() {
 		List<String> ret = new ArrayList<>();
 		String[] arrayDias = {"Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"};
 		for (String s : arrayDias) {
-			ret.add(mostrarHoraMasSolicitada(s)+"\n");
+			ret.add(mostrarSolicitudesPorHora(s)+"\n");
 		}
 		return ret;
 	}
 	
-	public String mostrarHorasSemanalesMasSolicitada() {
+	public String mostrarSolicitudesSemanales() {
 		String ret = "";
-		List<String> masSolicitadasSemana = horasSemanalesMasSolicitadas();
+		List<String> masSolicitadasSemana = solicitudesSemanales();
 		for(String s : masSolicitadasSemana) {
-			ret = ret + s ;		}
+			ret = ret + s ;	
+		}
 		return ret;
+	}
+	
+	public List<String> hrMasSolicitadaPorDia() {
+		List<String> ret = new ArrayList<>();
+		String[] arrayDias = {"Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"};
+		for (String s : arrayDias) {
+			ret.add(mostrarHrMasSolicitada(s)+"\n");
+		}
+		return ret;
+	}
+	
+	public String mostrarHrMasSolicitadaPorDia() {
+		String ret = "";
+		List<String> masSolicitadasSemana = hrMasSolicitadaPorDia();
+		for(String s : masSolicitadasSemana) {
+			ret = ret + s ;	
+		}
+		return ret;
+	}
+	
+	public void leerEscribir() {
+		CSVParser parser = new CSVParser(histograma.getSolicitudes());
+		CSVReader reader = new CSVReader("pedidos.csv",parser);
+		reader.read();
 	}
 	
 }
