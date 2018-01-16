@@ -10,21 +10,33 @@ public class CSVParser {
 	
 	public void parse(String entrada) {
 		String[] datos = entrada.split(";");
-		
-		int columna = 0;
-		
+				
 		String nombre = datos[0] + datos[1];
 		String dia = datos[2];
+		int hrIni = parsearHora(datos, 3);
+		int hrFin = parsearHora(datos, 4);
 		
-		// TODO extraer, parsear la hora. 
-		assert datos[3].charAt(3) == ':';
-		assert datos[3].substring(4, 5).equals("00");
-		System.out.println(datos[3]);
-		int hrIni = Integer.valueOf(datos[3].substring(0, 2));
-		System.out.println(hrIni);
-		System.exit(0);
-		int hrFin = 0;
+		Solicitud s = new Solicitud(nombre,dia,hrIni,hrFin);
+		solicitudes.add(s);
 		
+	}
+
+	private int parsearHora(String[] datos, int indice) {
+		assert datos[indice].charAt(2) == ':';
+		int result = 0;
+		if(datos[indice].substring(3, 5).equals("30")) {
+			//System.err.println("Estoy redondeando la hora para: " + datos[0]);
+			if(indice == 4)
+				result++;
+		}
+		else
+			assert datos[indice].substring(3, 5).equals("00");
 		
+		result += Integer.valueOf(datos[indice].substring(0, 2));
+		return result;
+	}
+	
+	public Solicitud getSolicitud(int numeroDeSolicitud) {
+		return solicitudes.get(numeroDeSolicitud);
 	}
 }

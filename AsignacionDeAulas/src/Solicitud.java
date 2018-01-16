@@ -10,7 +10,7 @@ public class Solicitud {
 	private int hrIni;
 	private int hrFin;
 	
-	static String[] arrayDias = {"domingo","lunes","martes","miercoles","jueves","viernes","sabado"};
+	static String[] arrayDias = {"Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"};
 	static Set<String> dias = new HashSet<>(Arrays.asList(arrayDias));
 	
 	static boolean horaValida(int hr) {
@@ -21,7 +21,6 @@ public class Solicitud {
 	// en especifico con una horar de inicio y de fin.
 	public Solicitud(String materia, String dia, int hrIni, int hrFin){
 		this.materia = materia;
-		
 		assert dias.contains(dia);
 		this.dia = dia;
 		
