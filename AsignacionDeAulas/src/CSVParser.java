@@ -25,7 +25,7 @@ public class CSVParser {
 		assert datos[indice].charAt(2) == ':';
 		int result = 0;
 		if(datos[indice].substring(3, 5).equals("30")) {
-			//System.err.println("Estoy redondeando la hora para: " + datos[0]);
+			//TODO System.err.println("Estoy redondeando la hora para: " + datos[0]);
 			if(indice == 4)
 				result++;
 		}
