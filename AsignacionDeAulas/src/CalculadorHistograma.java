@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class CalculadorHistograma {
@@ -69,7 +68,8 @@ public class CalculadorHistograma {
 		return ret;
 	}
 	
-	public String mostrarSolicitudesSemanales() {
+	// IMPRIME LO ANTERIOR.
+	public String imprimirSolicitudesSemanales() {
 		String ret = "";
 		List<String> masSolicitadasSemana = solicitudesSemanales();
 		for(String s : masSolicitadasSemana) {
@@ -78,6 +78,9 @@ public class CalculadorHistograma {
 		return ret;
 	}
 	
+	// Muestra la hora mas solicitada de cada dia de la semana,
+	// y muestra cuantas solicitudes existen en cada uno de los
+	// horarios mas solicitados de cada dia.
 	public List<String> hrMasSolicitadaPorDia() {
 		List<String> ret = new ArrayList<>();
 		String[] arrayDias = {"Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"};
@@ -87,7 +90,8 @@ public class CalculadorHistograma {
 		return ret;
 	}
 	
-	public String mostrarHrMasSolicitadaPorDia() {
+	// IMPRIME LO ANTERIOR.
+	public String imprimirHrMasSolicitadaPorDia() {
 		String ret = "";
 		List<String> masSolicitadasSemana = hrMasSolicitadaPorDia();
 		for(String s : masSolicitadasSemana) {

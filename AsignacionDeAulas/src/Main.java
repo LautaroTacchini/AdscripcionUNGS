@@ -13,8 +13,8 @@ public class Main {
 		CSVReader reader = new CSVReader("pedidos.csv",parser);
 		reader.read();
 		
-		System.out.println(ch.mostrarSolicitudesSemanales());
-		System.out.println(ch.mostrarHrMasSolicitadaPorDia());	
+		System.out.println(ch.imprimirSolicitudesSemanales());
+		System.out.println(ch.imprimirHrMasSolicitadaPorDia());	
 	}
 
 }

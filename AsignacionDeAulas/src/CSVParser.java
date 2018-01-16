@@ -20,6 +20,7 @@ public class CSVParser {
 		solicitudes.add(s);
 	}
 
+	// TODO FIJATE COMO HACER PARA QUE RECIBA UN HORARIO.
 	private int parsearHora(String[] datos, int indice) {
 		assert datos[indice].charAt(2) == ':';
 		int result = 0;
