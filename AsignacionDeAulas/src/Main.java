@@ -8,7 +8,10 @@ public class Main {
 		
 		Histograma histograma = new Histograma(solicitudes);
 		CalculadorHistograma ch = new CalculadorHistograma(histograma);
-		ch.leerEscribir();
+	
+		CSVParser parser = new CSVParser(solicitudes);
+		CSVReader reader = new CSVReader("pedidos.csv",parser);
+		reader.read();
 		
 		System.out.println(ch.mostrarSolicitudesSemanales());
 		System.out.println(ch.mostrarHrMasSolicitadaPorDia());	

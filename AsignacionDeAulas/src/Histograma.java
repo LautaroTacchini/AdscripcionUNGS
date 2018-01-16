@@ -1,12 +1,14 @@
+import java.util.Collections;
 import java.util.List;
 
 public class Histograma {
 	
-	private List<Solicitud> solicitudes;
+	public List<Solicitud> solicitudes;
 	
 	// Represeta todas las solicitudes registradas.
 	public Histograma(List<Solicitud> solicitudes){
-		this.solicitudes = solicitudes;		
+		this.solicitudes = Collections.unmodifiableList(solicitudes);	
+		
 	}
 	
 	// Dado un dia, con un horario de inicio,
@@ -19,9 +21,5 @@ public class Histograma {
 				}
 		}		
 		return cantSolucitudes;
-	}
-	
-	public List<Solicitud> getSolicitudes(){
-		return solicitudes;
 	}
 }

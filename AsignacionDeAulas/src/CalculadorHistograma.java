@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class CalculadorHistograma {
@@ -21,9 +22,8 @@ public class CalculadorHistograma {
 	// Devuelve un String con todos los horarios de un dia.
 	public String mostrarSolicitudesPorHora(String dia){
 		String ret = dia;
-		List<Integer> cantMaterias = cantSolicitudesPorHora(dia);
-		for(int indice = 0; indice < cantMaterias.size();indice++){
-			ret = ret + " " +cantMaterias.get(indice);
+		for(int i : cantSolicitudesPorHora(dia)) {
+			ret += " " + i;
 		}
 		return ret;
 	}
@@ -94,12 +94,5 @@ public class CalculadorHistograma {
 			ret = ret + s ;	
 		}
 		return ret;
-	}
-	
-	public void leerEscribir() {
-		CSVParser parser = new CSVParser(histograma.getSolicitudes());
-		CSVReader reader = new CSVReader("pedidos.csv",parser);
-		reader.read();
-	}
-	
+	}	
 }
