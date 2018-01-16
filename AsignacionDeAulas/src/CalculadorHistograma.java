@@ -71,8 +71,7 @@ public class CalculadorHistograma {
 		String ret = "";
 		List<String> masSolicitadasSemana = horasSemanalesMasSolicitadas();
 		for(String s : masSolicitadasSemana) {
-			ret = ret + s + "\n";
-		}
+			ret = ret + s ;		}
 		return ret;
 	}
 	
