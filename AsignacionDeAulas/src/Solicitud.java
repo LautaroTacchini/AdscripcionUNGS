@@ -7,28 +7,21 @@ public class Solicitud {
 	private String materia;
 	private String dia;
 	
-	private int hrIni;
-	private int hrFin;
+	// TODO REEMPLAZAR POR CLASE HORARIO.
+	private Horario hrIni;
+	private Horario hrFin;
 	
 	static String[] arrayDias = {"Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"};
 	static Set<String> dias = new HashSet<>(Arrays.asList(arrayDias));
-	
-	static boolean horaValida(int hr) {
-		return 0<=hr && hr<=23;
-	}
-	
+		
 	// Representa la solicitud de una materia para ser dictada un dia
 	// en especifico con una horar de inicio y de fin.
-	public Solicitud(String materia, String dia, int hrIni, int hrFin){
+	public Solicitud(String materia, String dia, Horario hrIni, Horario hrFin){
 		this.materia = materia;
 		
 		assert dias.contains(dia);
 		this.dia = dia;
-		
-		assert horaValida(hrIni);
 		this.hrIni = hrIni;
-		
-		assert horaValida(hrFin);
 		this.hrFin = hrFin;
 	}
 	
@@ -40,11 +33,11 @@ public class Solicitud {
 		return dia;
 	}
 
-	public int getHrIni() {
+	public Horario getHrIni() {
 		return hrIni;
 	}
 
-	public int getHrFin() {
+	public Horario getHrFin() {
 		return hrFin;
 	}
 	

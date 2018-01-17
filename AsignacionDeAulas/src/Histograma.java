@@ -16,9 +16,10 @@ public class Histograma {
 	public int cantSolicitudes(String dia, int hora){
 		int cantSolucitudes = 0;
 		for(Solicitud s : solicitudes) {
-			if(s.getDia().equals(dia) && s.getHrIni() <= hora && s.getHrFin() >= hora+1){
+			if(s.getDia().equals(dia) && s.getHrIni().getHora() <= hora && s.getHrFin().getHora() >= hora+1){
 					cantSolucitudes++;
-				}
+			}
+			// COMPARETO EN HORARIO PARA COMPARAR LAS HORAS
 		}		
 		return cantSolucitudes;
 	}

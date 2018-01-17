@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +12,12 @@ public class Main {
 	
 		CSVParser parser = new CSVParser(solicitudes);
 		CSVReader reader = new CSVReader("pedidos.csv",parser);
-		reader.read();
+		try {
+			reader.readTXTFile();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		System.out.println(ch.imprimirSolicitudesSemanales());
 		System.out.println(ch.imprimirHrMasSolicitadaPorDia());	

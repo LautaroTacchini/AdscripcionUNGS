@@ -1,5 +1,12 @@
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class CSVReader {
@@ -13,21 +20,22 @@ public class CSVReader {
         this.parser = parser;
 	}
 	
-	public void read() {
+	
+	public void readTXTFile() throws IOException {
 		boolean leyoPrimera = false;
-		try{
-            Scanner inputStream = new Scanner(archivo);
-            while(inputStream.hasNext()){
-                String data = inputStream.next();
+		
+		try {
+		   BufferedReader reader = new BufferedReader(new FileReader(archivo));  
+	       for (String line = reader.readLine(); line != null; line = reader.readLine()){
                 if(leyoPrimera)
-                	parser.parse(data);
+                	parser.parse(line);
                 else
                 	leyoPrimera = true;
             }
-            inputStream.close();
-        }
-		catch (FileNotFoundException e){
-			e.printStackTrace();
+	        reader.close();
+	        
+	    } catch (IOException e) {
+            e.printStackTrace();
         }
 	}
 

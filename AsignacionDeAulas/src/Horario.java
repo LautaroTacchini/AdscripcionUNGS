@@ -1,11 +1,14 @@
 
 public class Horario {
-	int hora;
-	int minutos;
+	private int hora;
+	private int minutos;
 	
 	public Horario(int hora, int minutos) {
 		assert horaValida(hora);
+		this.hora = hora;
+		
 		assert minutosValidos(minutos);
+		this.minutos = minutos;
 	}
 	
 	public boolean horaValida(int hr) {
@@ -15,5 +18,13 @@ public class Horario {
 	public boolean minutosValidos(int minutos) {
 		return 0<=minutos && minutos<=59;
 	}
-
+	
+	public int getHora() {
+		return hora;
+	}
+	
+	public int getMinutos() {
+		return minutos;
+	}
+	
 }
