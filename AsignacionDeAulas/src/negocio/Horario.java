@@ -1,3 +1,4 @@
+package negocio;
 
 public class Horario {
 	private int hora;
@@ -25,6 +26,11 @@ public class Horario {
 	
 	public int getMinutos() {
 		return minutos;
+	}
+	
+	public boolean compareTo(Horario hora) {
+		
+		return false;
 	}
 	
 }

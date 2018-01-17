@@ -1,13 +1,8 @@
+package presentacion;
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.Reader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
 
 public class CSVReader {
 	
@@ -20,8 +15,7 @@ public class CSVReader {
         this.parser = parser;
 	}
 	
-	
-	public void readTXTFile() throws IOException {
+	public void read() throws IOException {
 		boolean leyoPrimera = false;
 		
 		try {

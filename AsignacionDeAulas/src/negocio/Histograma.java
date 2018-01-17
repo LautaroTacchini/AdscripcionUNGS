@@ -1,3 +1,4 @@
+package negocio;
 import java.util.Collections;
 import java.util.List;
 
@@ -23,4 +24,8 @@ public class Histograma {
 		}		
 		return cantSolucitudes;
 	}
+	
+//	if(s.getDia().equals(dia) && s.getHrIni().getHora() <= hora && s.getHrFin().getHora() >= hora+1){
+//		cantSolucitudes++;
+//	}
 }
