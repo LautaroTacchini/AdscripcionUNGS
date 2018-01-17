@@ -12,7 +12,7 @@ public class Main {
 	public static void main(String args[]){
 		List<Solicitud> solicitudes = new ArrayList<>();
 		
-		Histograma histograma = new Histograma(solicitudes);
+		Histograma histograma = new Histograma(solicitudes,15);
 		CalculadorHistograma ch = new CalculadorHistograma(histograma);
 	
 		CSVParser parser = new CSVParser(solicitudes);

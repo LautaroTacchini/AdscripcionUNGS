@@ -13,11 +13,11 @@ public class Horario {
 	}
 	
 	public boolean horaValida(int hr) {
-		return 0<=hr && hr<=23;
+		return 0 <= hr && hr<=23;
 	}
 	
 	public boolean minutosValidos(int minutos) {
-		return 0<=minutos && minutos<=59;
+		return 0 <= minutos && minutos <= 59;
 	}
 	
 	public int getHora() {
@@ -28,9 +28,18 @@ public class Horario {
 		return minutos;
 	}
 	
-	public boolean compareTo(Horario hora) {
+	public boolean compareTo(Horario otro) {
+		boolean ret = false;
 		
-		return false;
+		if(hora <= otro.getHora())
+			ret = true;
+		
+		return ret;
+	}
+	
+	@Override
+	public String toString() {
+		return hora + ":" + minutos;
 	}
 	
 }

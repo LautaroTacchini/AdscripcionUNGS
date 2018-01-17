@@ -14,7 +14,7 @@ public class CalculadorHistograma {
 	public List<Integer> cantSolicitudesPorHora(String dia){
 		List<Integer> cantMateriasPorHora = new ArrayList<Integer>();
 		for(int i=0; i<=23; i++){
-			cantMateriasPorHora.add(histograma.cantSolicitudes(dia,i));
+			cantMateriasPorHora.add(histograma.cantSolicitudesPorHora(dia,i));
 		}		
 		return cantMateriasPorHora;
 	}
@@ -30,8 +30,8 @@ public class CalculadorHistograma {
 	
 	// Devuelve la cantidad maxima de solicitudes en un dia.
 	private int maxSolicitudes(String dia){
-		int horaMasSolicitada = horaMasSolicitada(dia);
-		int cantSolicitudes = histograma.cantSolicitudes(dia, horaMasSolicitada);
+		int horarioMasSolicitado = horaMasSolicitada(dia);
+		int cantSolicitudes = histograma.cantSolicitudesPorHora(dia, horarioMasSolicitado);
 		return cantSolicitudes;
 	}
 	
@@ -40,20 +40,20 @@ public class CalculadorHistograma {
 	private int horaMasSolicitada(String dia){
 		List<Integer> cantMateriasPorHora = cantSolicitudesPorHora(dia);
 		int max = 0; 
-		int indice = 0;
+		int ret = 0;
 		for (int i=0; i < cantMateriasPorHora.size();i++){
 			if(max < cantMateriasPorHora.get(i)){
 				max = cantMateriasPorHora.get(i);
-				indice = i;
+				ret = i;
 			}
 		}
-		return indice;
+		return ret;
 	}
 	
 	// Muestra la hora mas solicitada con su respectiva cantidad,
 	// de solicitudes.
 	public String mostrarHrMasSolicitada(String dia){
-		String ret = dia + " " +Integer.toString(horaMasSolicitada(dia)) + "Hrs"
+		String ret = dia + " " +Integer.valueOf(horaMasSolicitada(dia)) + "Hrs"
 						 + "  Cant. de Solicitudes: " + Integer.toString(maxSolicitudes(dia));
 		return ret;
 	}
