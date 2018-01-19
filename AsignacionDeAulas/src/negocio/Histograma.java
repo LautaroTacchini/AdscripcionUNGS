@@ -5,36 +5,41 @@ import java.util.List;
 public class Histograma {
 	
 	public List<Solicitud> solicitudes;
-	public int intervalo;
+	public int solapamiento;
 	
 	// Represeta todas las solicitudes registradas.
 	public Histograma(List<Solicitud> solicitudes, int intervalo){
 		this.solicitudes = Collections.unmodifiableList(solicitudes);
-		this.intervalo = intervalo;	
+		this.solapamiento = intervalo;	
 	}
-	
+			
 	// Dado un dia, con un horario de inicio,
 	// devuelve la cantidad de materias que solicitaron ese horario.	
-	public int cantSolicitudes(String dia, Horario hora){
+	public int cantSolicitudes(String dia, Horario horario){
+		assert horarioDeInicio(horario);
+		
 		int cantSolucitudes = 0;
 		for(Solicitud s : solicitudes) {
-			if(s.getDia().equals(dia) &&
-               s.getHrIni().getHora() <= hora.getHora() && s.getHrFin().getHora() <= hora.getMinutos()+intervalo)
+			Horario nuevoHorario = horario.desplazarHorario(solapamiento);
+			if(s.getDia().equals(dia) && s.getHrIni().compareTo(horario) <= 0 && s.getHrFin().compareTo(nuevoHorario) >= 0)
 			{
-					cantSolucitudes++;
+			   cantSolucitudes++;
 			}
-			//TODO  COMPARETO EN HORARIO PARA COMPARAR LAS HORAS
 		}		
 		return cantSolucitudes;
+	}
+
+	private boolean horarioDeInicio(Horario horario) {
+		return horario.getMinutos() == 00;
 	}
 
 	public int cantSolicitudesPorHora(String dia, int hora){
 		int cantSolucitudes = 0;
 		for(Solicitud s : solicitudes) {
-			if(s.getDia().equals(dia) && s.getHrIni().getHora() <= hora && s.getHrFin().getHora() >= hora+1){
+			if(s.getDia().equals(dia) &&
+			   s.getHrIni().getHora() <= hora && s.getHrFin().getHora() >= hora+1){
 					cantSolucitudes++;
 			}
-			//TODO  COMPARETO EN HORARIO PARA COMPARAR LAS HORAS
 		}		
 		return cantSolucitudes;
 	}	

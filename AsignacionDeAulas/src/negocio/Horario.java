@@ -1,6 +1,6 @@
 package negocio;
 
-public class Horario {
+public class Horario implements Comparable<Horario>{
 	private int hora;
 	private int minutos;
 	
@@ -28,18 +28,35 @@ public class Horario {
 		return minutos;
 	}
 	
-	public boolean compareTo(Horario otro) {
-		boolean ret = false;
+	public Horario desplazarHorario(int minutos) {
+		assert(minutos > 0);
 		
-		if(hora <= otro.getHora())
-			ret = true;
-		
-		return ret;
+		int nuevaHora = 0;
+		int nuevosMinutos = 0;
+		if(this.minutos + minutos >= 60) {
+			nuevaHora = this.hora + 1;
+			nuevosMinutos = (this.minutos + minutos) - 60;
+		}
+		if(nuevaHora >= 23) {
+			nuevaHora = (this.hora + nuevaHora) - 24;
+		}
+		Horario nuevoHorario = new Horario(nuevaHora,nuevosMinutos);
+		return nuevoHorario;
 	}
+	
 	
 	@Override
 	public String toString() {
 		return hora + ":" + minutos;
+	}
+
+	@Override
+	public int compareTo(Horario otro) {
+				
+		if(hora != otro.getHora())
+			return hora - otro.getHora();
+		
+		return minutos - otro.getMinutos();
 	}
 	
 }

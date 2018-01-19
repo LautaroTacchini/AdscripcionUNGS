@@ -13,7 +13,7 @@ public class CalculadorHistograma {
 	// con la cantidad de solicitudes por hora.
 	public List<Integer> cantSolicitudesPorHora(String dia){
 		List<Integer> cantMateriasPorHora = new ArrayList<Integer>();
-		for(int i=0; i<=23; i++){
+		for(int i=0; i<=23; i++){// TODO ESTO CAMBIA pasa a ser los intervalos que se reciban en la clase histograma.
 			cantMateriasPorHora.add(histograma.cantSolicitudesPorHora(dia,i));
 		}		
 		return cantMateriasPorHora;
@@ -27,6 +27,7 @@ public class CalculadorHistograma {
 		}
 		return ret;
 	}
+	// TODO HACER MOSTRARSOLICITUDESPORHORARIO INCLUIR MINUTOS
 	
 	// Devuelve la cantidad maxima de solicitudes en un dia.
 	private int maxSolicitudes(String dia){
