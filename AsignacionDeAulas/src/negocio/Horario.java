@@ -29,19 +29,19 @@ public class Horario implements Comparable<Horario>{
 	}
 	
 	public Horario desplazarHorario(int minutos) {
-		assert(minutos > 0);
+		assert(minutos > 0 && minutos < 60);
 		
-		int nuevaHora = 0;
-		int nuevosMinutos = 0;
-		if(this.minutos + minutos >= 60) {
-			nuevaHora = this.hora + 1;
-			nuevosMinutos = (this.minutos + minutos) - 60;
+		int nuevaHora = hora;
+		int nuevosMinutos = minutos + this.minutos;
+		
+		if(nuevosMinutos >= 60) {
+			nuevaHora++;
+			nuevosMinutos -= 60;
+		} 
+		if(nuevaHora >= 24) {
+			nuevaHora -= 24;
 		}
-		if(nuevaHora >= 23) {
-			nuevaHora = (this.hora + nuevaHora) - 24;
-		}
-		Horario nuevoHorario = new Horario(nuevaHora,nuevosMinutos);
-		return nuevoHorario;
+		return new Horario(nuevaHora,nuevosMinutos);
 	}
 	
 	
@@ -55,7 +55,6 @@ public class Horario implements Comparable<Horario>{
 				
 		if(hora != otro.getHora())
 			return hora - otro.getHora();
-		
 		return minutos - otro.getMinutos();
 	}
 	

@@ -12,7 +12,7 @@ public class Main {
 	public static void main(String args[]){
 		List<Solicitud> solicitudes = new ArrayList<>();
 		
-		Histograma histograma = new Histograma(solicitudes,15);
+		Histograma histograma = new Histograma(solicitudes,15,30);
 		CalculadorHistograma ch = new CalculadorHistograma(histograma);
 	
 		CSVParser parser = new CSVParser(solicitudes);
@@ -20,12 +20,12 @@ public class Main {
 		try {
 			reader.read();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		System.out.println(ch.imprimirSolicitudesSemanales());
-		System.out.println(ch.imprimirHrMasSolicitadaPorDia());	
+//		System.out.println(ch.imprimirSolicitudesSemanales());
+//		System.out.println(ch.imprimirHrMasSolicitadaPorDia());	
+		System.out.println(histograma.mostrarSolicitudesPorHorario("Lunes"));
 	}
 
 }

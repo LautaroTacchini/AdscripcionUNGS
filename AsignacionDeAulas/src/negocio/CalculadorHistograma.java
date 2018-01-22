@@ -13,9 +13,9 @@ public class CalculadorHistograma {
 	// con la cantidad de solicitudes por hora.
 	public List<Integer> cantSolicitudesPorHora(String dia){
 		List<Integer> cantMateriasPorHora = new ArrayList<Integer>();
-		for(int i=0; i<=23; i++){// TODO ESTO CAMBIA pasa a ser los intervalos que se reciban en la clase histograma.
+		for(int i=0; i<=23; i++){
 			cantMateriasPorHora.add(histograma.cantSolicitudesPorHora(dia,i));
-		}		
+		}	
 		return cantMateriasPorHora;
 	}
 	

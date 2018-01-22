@@ -1,37 +1,50 @@
 package negocio;
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Histograma {
 	
 	public List<Solicitud> solicitudes;
 	public int solapamiento;
+	public int intervalo;
 	
 	// Represeta todas las solicitudes registradas.
-	public Histograma(List<Solicitud> solicitudes, int intervalo){
+	public Histograma(List<Solicitud> solicitudes, int solapamiento, int intervalo){
 		this.solicitudes = Collections.unmodifiableList(solicitudes);
-		this.solapamiento = intervalo;	
+		this.solapamiento = solapamiento;
+				
+		assert intervaloValido(intervalo);
+		this.intervalo = intervalo;
+	}
+	
+	static boolean intervaloValido(int intervalo) {
+		if(intervalo <= 60)
+			return 60 % intervalo==0;
+			
+		return intervalo % 60 == 0;			
 	}
 			
 	// Dado un dia, con un horario de inicio,
 	// devuelve la cantidad de materias que solicitaron ese horario.	
 	public int cantSolicitudes(String dia, Horario horario){
-		assert horarioDeInicio(horario);
-		
 		int cantSolucitudes = 0;
+		System.out.println("imprimir");
 		for(Solicitud s : solicitudes) {
 			Horario nuevoHorario = horario.desplazarHorario(solapamiento);
-			if(s.getDia().equals(dia) && s.getHrIni().compareTo(horario) <= 0 && s.getHrFin().compareTo(nuevoHorario) >= 0)
+			if(s.getDia().equals(dia) && 
+					s.getHrIni().compareTo(horario) <= 0 && 
+					s.getHrFin().compareTo(nuevoHorario) >= 0)
 			{
 			   cantSolucitudes++;
+			   
 			}
 		}		
 		return cantSolucitudes;
 	}
 
-	private boolean horarioDeInicio(Horario horario) {
-		return horario.getMinutos() == 00;
-	}
 
 	public int cantSolicitudesPorHora(String dia, int hora){
 		int cantSolucitudes = 0;
@@ -42,5 +55,42 @@ public class Histograma {
 			}
 		}		
 		return cantSolucitudes;
-	}	
+	}
+	
+	// Dado un dia de la semana, devuelve todos los horarios
+	// con la cantidad de solicitudes por hora.
+	public List<Integer> cantSolicitudesPorHorario(String dia){
+		List<Integer> cantMateriasPorHorario = new ArrayList<Integer>();
+		List<Horario> horarios = new ArrayList<>();
+		
+		calcularHorarios(horarios);
+	
+		for(Horario h :  horarios) {
+			cantMateriasPorHorario.add(cantSolicitudes(dia,h));
+		}
+		
+		return cantMateriasPorHorario;
+	}
+
+	private void calcularHorarios(List<Horario> horarios) {
+		for(int i=0; i<=23; i++) {
+			int minutos = 0;
+			while(minutos < 59) {
+				Horario nuevo = new Horario(i,minutos);
+				minutos = minutos + intervalo;
+				horarios.add(nuevo);
+			}
+			minutos = 0;
+		}
+	}
+	
+	// Devuelve un String con todos los horarios de un dia.
+	public String mostrarSolicitudesPorHorario(String dia){
+		String ret = dia;
+		for(Integer i : cantSolicitudesPorHorario(dia)) {
+			ret += " " + i;
+		}
+		return ret;
+	}
+	
 }
