@@ -23,9 +23,8 @@ public class Main {
 			e.printStackTrace();
 		}
 		
-//		System.out.println(ch.imprimirSolicitudesSemanales());
-//		System.out.println(ch.imprimirHrMasSolicitadaPorDia());	
-		System.out.println(histograma.mostrarSolicitudesPorHorario("Lunes"));
+		System.out.println(ch.imprimirSolicitudesSemanales());
+		System.out.println(ch.imprimirHrMasSolicitadaPorDia());	
 	}
 
 }

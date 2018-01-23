@@ -47,7 +47,7 @@ public class Horario implements Comparable<Horario>{
 	
 	@Override
 	public String toString() {
-		return hora + ":" + minutos;
+		return String.format("%02d",hora) + ":" + String.format("%02d", minutos);
 	}
 
 	@Override
