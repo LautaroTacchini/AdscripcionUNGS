@@ -1,0 +1,10 @@
+Instrucciones de despliegue
+===========================
+
+File > Export... > Java > Runnable JAR file
+Launch configuration: JarMainExactas
+Library handling: Extract required libraries into generated jar
+('Extract requiered' es prácticamente la peor opción pero es la única que está
+andando hta el momento).
+Copiar aulas.bat, config.txt, cplex125.dll (win) o libcplex25.so (linux).
+Adaptar config.txt y aulas.bat, si es necesario.

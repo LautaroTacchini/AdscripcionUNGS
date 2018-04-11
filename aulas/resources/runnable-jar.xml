@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project aulas">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="/home/javiermv/Desktop/aulas.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="JavaMainExactas"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="/store/home/javiermv@thai/Workspaces/aulas/aulas-ungs/aulas/bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="/opt/Genuitec/Common/plugins/org.codehaus.groovy_2.0.0.xx-20120727-1400-e42/lib/groovy-all-2.0.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/opt/Genuitec/Common/plugins/org.codehaus.groovy_2.0.0.xx-20120727-1400-e42/lib/ivy-2.2.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/opt/Genuitec/Common/plugins/org.codehaus.groovy_2.0.0.xx-20120727-1400-e42/lib/commons-cli-1.2.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/opt/Genuitec/Common/plugins/org.codehaus.groovy_2.0.0.xx-20120727-1400-e42/lib/bsf-2.4.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/opt/Genuitec/Common/plugins/org.codehaus.groovy_2.0.0.xx-20120727-1400-e42/lib/jline-1.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/opt/Genuitec/Common/plugins/org.codehaus.groovy_2.0.0.xx-20120727-1400-e42/lib/asm-4.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/opt/Genuitec/Common/plugins/org.codehaus.groovy_2.0.0.xx-20120727-1400-e42/lib/antlr-2.7.7.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/opt/Genuitec/Common/plugins/org.codehaus.groovy_2.0.0.xx-20120727-1400-e42/lib/servlet-api-2.4.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/opt/Genuitec/Common/plugins/org.codehaus.groovy_2.0.0.xx-20120727-1400-e42/lib/asm-tree-4.0.jar"/>
+            <fileset dir="/home/javiermv/.groovy/greclipse/global_dsld_support"/>
+            <fileset dir="/opt/Genuitec/Common/plugins/org.codehaus.groovy_2.0.0.xx-20120727-1400-e42/plugin_dsld_support/"/>
+            <zipfileset excludes="META-INF/*.SF" src="/opt/Genuitec/Common/plugins/org.junit_4.10.0.v4_10_0_v20120426-0900/junit.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/opt/Genuitec/Common/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/store/home/javiermv@thai/Workspaces/aulas/aulas-ungs/aulas/cplex-12.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/store/home/javiermv@thai/Workspaces/aulas/aulas-ungs/aulas/jxl.jar"/>
+        </jar>
+    </target>
+</project>

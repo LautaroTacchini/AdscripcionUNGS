@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.codehaus.groovy.eclipse.groovyScriptLaunchConfiguration">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/aulas"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.debug.ui.ATTR_CONSOLE_ENCODING" value="UTF-8"/>
+<listAttribute key="org.eclipse.jdt.launching.CLASSPATH">
+<listEntry value="/home/javiermv/Workspaces/Eclipse 3.7 Platform IDE/aulas-ungs/aulas/bin"/>
+<listEntry value="/opt/pulse/Common/plugins/org.codehaus.groovy_1.8.2.xx-20110929-1800-e37/lib/groovy-all-1.8.2.jar"/>
+<listEntry value="/opt/pulse/Common/plugins/org.codehaus.groovy_1.8.2.xx-20110929-1800-e37/lib/ivy-2.2.0.jar"/>
+<listEntry value="/opt/pulse/Common/plugins/org.codehaus.groovy_1.8.2.xx-20110929-1800-e37/lib/servlet-api-2.4.jar"/>
+<listEntry value="/opt/pulse/Common/plugins/org.codehaus.groovy_1.8.2.xx-20110929-1800-e37/lib/commons-cli-1.2.jar"/>
+<listEntry value="/opt/pulse/Common/plugins/org.codehaus.groovy_1.8.2.xx-20110929-1800-e37/lib/jline-0.9.94.jar"/>
+<listEntry value="/home/javiermv/.groovy/greclipse/global_dsld_support"/>
+<listEntry value="/opt/pulse/Common/plugins/org.codehaus.groovy_1.8.2.xx-20110929-1800-e37/plugin_dsld_support/"/>
+<listEntry value="/opt/pulse/Common/plugins/org.junit_4.8.2.v4_8_2_v20110321-1705/junit.jar"/>
+<listEntry value="/opt/pulse/Common/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar"/>
+<listEntry value="/home/javiermv/Workspaces/Eclipse 3.7 Platform IDE/aulas-ungs/aulas/cplex-12.1.jar"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.codehaus.groovy.tools.GroovyStarter"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="--classpath &quot;${workspace_loc:/aulas}/cplex-12.5.jar:${workspace_loc:/aulas}/src:${workspace_loc:/aulas}/tests:${workspace_loc:/aulas}/bin&quot; --main groovy.ui.GroovyMain &quot;${resource_loc:/aulas/src/MainExactas.groovy}&quot;"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="aulas"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dgroovy.starter.conf=&quot;${groovy_home}/conf/groovy-starter.conf&quot; -Dgroovy.home=&quot;${groovy_home}&quot;"/>
+</launchConfiguration>

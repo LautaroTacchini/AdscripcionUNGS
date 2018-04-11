@@ -1,0 +1,95 @@
+Escribiendo formulación...
+- función objetivo... 
+- restricciones de un aula por clase...
+- restricciones de aulas compatibles (por cliques)... 
+- restricciones de preasignacion... (1)
+- restricciones de conservacion de aula... 
+- variables...
+IBM ILOG License Manager: "IBM ILOG Optimization Suite for Academic Initiative" is accessing CPLEX 12 with option(s): "e m b q ".
+Tried aggregator 1 time.
+MIP Presolve eliminated 943 rows and 91 columns.
+Reduced MIP has 5084 rows, 4748 columns, and 29444 nonzeros.
+Reduced MIP has 4748 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time =    0.07 sec.
+Clique table members: 838.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 4 threads.
+Root relaxation solution time =    0.17 sec.
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer     Best Node    ItCnt     Gap
+
+*     0+    0                      -794510.0000                   1308     --- 
+      0     0     -255.4690   378  -794510.0000     -255.4690     1308   99.97%
+*     0+    0                         -519.0000     -255.4690     1308   50.78%
+      0     0     -280.5409   349     -519.0000     Cuts: 207     2200   45.95%
+      0     0     -284.5211   365     -519.0000  ZeroHalf: 17     2444   45.18%
+      0     0     -288.0366   384     -519.0000  ZeroHalf: 21     2742   44.50%
+*     0+    0                         -458.0000     -288.0366     2742   37.11%
+      0     0     -292.4424   425     -458.0000  ZeroHalf: 20     3074   36.15%
+      0     0     -301.1129   434     -458.0000  ZeroHalf: 18     3525   34.25%
+      0     0     -307.2770   371     -458.0000      Cuts: 50     3966   32.91%
+      0     0     -310.6311   484     -458.0000      Cuts: 14     4306   32.18%
+      0     0     -313.7733   488     -458.0000  ZeroHalf: 15     4722   31.49%
+      0     0     -319.8948   492     -458.0000  ZeroHalf: 18     5069   30.15%
+      0     0     -322.0877   439     -458.0000      Cuts: 11     5235   29.68%
+      0     0     -324.8457   393     -458.0000      Cuts: 17     5502   29.07%
+      0     0     -325.2120   388     -458.0000   ZeroHalf: 6     5598   28.99%
+      0     0     -325.9664   419     -458.0000   ZeroHalf: 9     5767   28.83%
+*     0+    0                         -448.0000     -325.9664     5767   27.24%
+      0     0     -327.0862   448     -448.0000   ZeroHalf: 8     5894   26.99%
+      0     0     -327.6816   395     -448.0000   ZeroHalf: 9     6007   26.86%
+      0     0     -327.9881   450     -448.0000   ZeroHalf: 7     6110   26.79%
+      0     0     -329.6814   398     -448.0000   ZeroHalf: 5     6249   26.41%
+      0     0     -330.1613   482     -448.0000   ZeroHalf: 7     6326   26.30%
+      0     0     -331.6910   361     -448.0000      Cuts: 16     6424   25.96%
+      0     0     -332.2617   431     -448.0000   ZeroHalf: 6     6501   25.83%
+      0     0     -333.1982   468     -448.0000      Cuts: 13     6598   25.63%
+      0     0     -333.8759   424     -448.0000       Cuts: 6     6645   25.47%
+      0     0     -335.0807   372     -448.0000       Cuts: 8     6735   25.21%
+      0     0     -335.5121   480     -448.0000   ZeroHalf: 6     6788   25.11%
+      0     0     -335.8005   420     -448.0000       Cuts: 4     6822   25.04%
+      0     0     -335.8087   424     -448.0000       Cuts: 7     6834   25.04%
+      0     0     -336.0975   451     -448.0000       Cuts: 8     6867   24.98%
+      0     0     -336.1190   453     -448.0000   ZeroHalf: 3     6912   24.97%
+*     0+    0                         -408.0000     -336.1190     6912   17.62%
+*     0+    0                         -397.0000     -336.1190     6912   15.34%
+*     0+    0                         -392.0000     -336.1190     6912   14.26%
+*     0+    0                         -391.0000     -336.1190     6912   14.04%
+      0     2     -336.1190   453     -391.0000     -336.1190     6912   14.04%
+    100    91     -359.0808   341     -391.0000     -353.5808    13460    9.57%
+    200   156     -371.3690   119     -391.0000     -353.5808    21429    9.57%
+    300   220     -356.4638   209     -391.0000     -355.0808    26263    9.19%
+    400   300     -384.8864   143     -391.0000     -355.1058    33804    9.18%
+    500   382     -365.7842   262     -391.0000     -355.6165    38899    9.05%
+    600   186     -385.0000    24     -391.0000     -365.8542    56025    6.43%
+    700   141     -386.3333    28     -391.0000     -372.2741    61546    4.79%
+    800   114        cutoff           -391.0000     -372.2741    64759    4.79%
+    900   108        cutoff           -391.0000     -372.2741    67065    4.79%
+   1000   122    infeasible           -391.0000     -380.6250    70276    2.65%
+Elapsed real time =  24.44 sec. (tree size =  0.18 MB, solutions = 8)
+   1100   150        cutoff           -391.0000     -382.3333    73129    2.22%
+   1200   162        cutoff           -391.0000     -384.5333    76702    1.65%
+   1300   134        cutoff           -391.0000     -386.0000    79914    1.28%
+   1400    74        cutoff           -391.0000     -387.0000    82450    1.02%
+   1500     4     -390.0000    43     -391.0000     -389.0286    84192    0.50%
+
+Implied bound cuts applied:  3
+Zero-half cuts applied:  116
+Gomory fractional cuts applied:  11
+
+Root node processing (before b&c):
+  Real time             =    5.13
+Parallel b&c, 4 threads:
+  Real time             =   21.11
+  Sync time (average)   =    2.84
+  Wait time (average)   =    4.82
+                          -------
+Total (root+branch&cut) =   26.24 sec.
+clasesAsignadas=172
+clasesNoAsignadas=0
+alumnosAsignados=8013
+alumnosNoAsignados=0
+
+Con 300 segundos de máximo, alcanzó el óptimo en 26 segundos.

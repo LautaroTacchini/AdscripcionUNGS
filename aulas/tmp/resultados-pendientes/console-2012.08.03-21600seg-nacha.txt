@@ -1,0 +1,78 @@
+IBM ILOG License Manager: "IBM ILOG Optimization Suite for Academic Initiative" is accessing CPLEX 12 with option(s): "e m b q ".
+Tried aggregator 1 time.
+MIP Presolve eliminated 1809 rows and 20 columns.
+Reduced MIP has 51754 rows, 14850 columns, and 197834 nonzeros.
+Reduced MIP has 14850 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time =    0.33 sec.
+Clique table members: 2332.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 4 threads.
+Root relaxation solution time =  166.08 sec.
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer     Best Node    ItCnt     Gap
+
+*     0+    0                     -2012900.0000                  33117     --- 
+      0     0    -6654.6816  2506 -2012900.0000    -6654.6816    33117   99.67%
+*     0+    0                       -54758.0000    -6654.6816    33117   87.85%
+      0     0    -6716.1321  2611   -54758.0000     Cuts: 251    61230   87.73%
+      0     0    -6742.6187  2674   -54758.0000  ZeroHalf: 59    87083   87.69%
+*     0+    0                       -38574.0000    -6742.6187    87083   82.52%
+      0     0    -6796.6814  2728   -38574.0000  ZeroHalf: 46   115067   82.38%
+      0     0    -6823.5471  2584   -38574.0000  ZeroHalf: 48   136851   82.31%
+      0     0    -6842.4396  2681   -38574.0000  ZeroHalf: 46   161131   82.26%
+      0     0    -6859.1450  2816   -38574.0000  ZeroHalf: 35   184559   82.22%
+      0     0    -6875.2166  2860   -38574.0000  ZeroHalf: 30   204602   82.18%
+      0     0    -6896.4720  2790   -38574.0000  ZeroHalf: 26   222809   82.12%
+      0     0    -6911.2071  2711   -38574.0000  ZeroHalf: 29   242159   82.08%
+*     0+    0                       -20084.0000    -6911.2071   242159   65.59%
+      0     0    -6921.2199  2834   -20084.0000  ZeroHalf: 25   258537   65.54%
+      0     0    -6932.0750  2728   -20084.0000  ZeroHalf: 21   274132   65.48%
+      0     0    -6941.8544  2776   -20084.0000  ZeroHalf: 23   287496   65.44%
+      0     0    -6955.3386  2714   -20084.0000  ZeroHalf: 18   304120   65.37%
+      0     0    -6963.8744  2755   -20084.0000  ZeroHalf: 25   320083   65.33%
+      0     0    -6974.7696  2733   -20084.0000  ZeroHalf: 23   335842   65.27%
+      0     0    -6984.2605  2779   -20084.0000  ZeroHalf: 25   352449   65.22%
+      0     0    -6996.1485  2802   -20084.0000  ZeroHalf: 28   365146   65.17%
+      0     0    -7007.0789  2777   -20084.0000  ZeroHalf: 26   378384   65.11%
+      0     0    -7015.4259  2782   -20084.0000  ZeroHalf: 25   392933   65.07%
+      0     0    -7019.7773  2677   -20084.0000  ZeroHalf: 16   407392   65.05%
+      0     0    -7024.6455  2651   -20084.0000  ZeroHalf: 18   421982   65.02%
+      0     0    -7026.1961  2778   -20084.0000   ZeroHalf: 7   435724   65.02%
+      0     0    -7027.8346  2803   -20084.0000   ZeroHalf: 9   449123   65.01%
+      0     0    -7028.6328  2810   -20084.0000  ZeroHalf: 13   459779   65.00%
+*     0+    0                       -13909.0000    -7028.6328   459779   49.47%
+      0     0    -7029.4973  2811   -13909.0000   ZeroHalf: 6   471796   49.46%
+*     0+    0                        -9485.0000    -7029.4973   471796   25.89%
+Heuristic still looking.
+Heuristic still looking.
+*     0+    0                        -8339.0000    -7029.4973   471796   15.70%
+*     0+    0                        -8205.0000    -7029.4973   471796   14.33%
+      0     2    -7029.4973  2811    -8205.0000    -7029.4973   471796   14.33%
+Elapsed real time = 3435.19 sec. (tree size =  0.01 MB, solutions = 8)
+*     8+    8                        -8125.0000    -7029.4974   569133   13.48%
+*     9+    9                        -7897.0000    -7029.4974   573374   10.99%
+    100   102    -7085.9978  2426    -7897.0000    -7034.3710  1234685   10.92%
+    200   202    -7226.2147  1937    -7897.0000    -7034.3710  1836524   10.92%
+    300   302    -7273.4984  1679    -7897.0000    -7034.3710  2270172   10.92%
+    400   402    -7354.9844  1253    -7897.0000    -7034.3710  2592257   10.92%
+    500   502    -7421.9894  1167    -7897.0000    -7034.3710  2889016   10.92%
+*   510+  339                        -7893.0000    -7041.9529  3076665   10.78%
+    600   388    -7103.0094  2165    -7893.0000    -7046.6049  3777238   10.72%
+
+Zero-half cuts applied:  333
+Gomory fractional cuts applied:  9
+
+Root node processing (before b&c):
+  Real time             = 3434.71
+Parallel b&c, 4 threads:
+  Real time             = 18165.18
+  Sync time (average)   = 1493.69
+  Wait time (average)   = 2760.52
+                          -------
+Total (root+branch&cut) = 21599.90 sec.
+clasesAsignadas=496
+clasesNoAsignadas=11
+alumnosAsignados=20080
+alumnosNoAsignados=49

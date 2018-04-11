@@ -1,0 +1,46 @@
+1) Problema de encoding en la consola; los acentos se ven feos.
+2) Agregar corte automatico al alcanzar la precision deseada.
+3) Al agregar corte automatico, informar el tiempo que tardo.
+4) Opción para correr solo algunos días
+5) Que cuando los días de la semana digan "Sàbado" o "Sábados"
+   aparezca un mensaje de error explicando que deben estar
+   bien escritos.
+6) Que cuando la cantidad de inscriptos quede en blanco no 
+   aparezca una excepción con "" en algún lado, sino un lindo
+   cartelito que explique algo (o autocomplete con cero), ver.
+7) Armar un documento explicando cómo se interpretan las celdas
+   en blanco en la hoja de pedidos y los valores (pabellones) 
+   preferidos vs preasignados.
+8) Documentar cuáles son las condiciones que se intrepretan 
+   como error y explicar cuál debería ser la conducta del
+   programa, además de cuál es el comportamiento actual en los
+   casos en que no coincida con lo esperado.
+9) Mover preferencias a una solapa de la planilla de pedidos.
+10)Documentar arquitectura.
+11)Migrar a LP_Solve
+12)Pasar el solver a cliente/servidor
+13)Reportar progreso en el cliente cuando haya cliente/servidor.
+14)Instalar un servidor Cplex tras un webservice.
+15)Que los clientes busquen el webservice y usen el lpsolve
+   cuando no encuentren servicio online.
+16)Agregar la posibilidad de tener aulas que no se asignen.
+17)Cuando hay dos pedidos asignados a una misma aula explota con 
+   'cXXX infeasible: no solution exists', o algo x el estilo. Si
+   se mira la fila XXX + 1, puede haber un error del tipo 'varias
+   materias en misma aula <= 1'. Habría que ver si se puede 
+   capturar la fila (restricción o 'C'onstraint) que genera la
+   infactibilidad, e intentar luego descubrir a qué filas de
+   preasignaciones corresponde. No es fácil de arreglar pero es
+   uno de los problemas importantes que están quedando fuera de
+   la posibilidad de interpretarse fácilmente. Bah, capaz que
+   esto convenga para casos más difíciles; de momento esto
+   parece infinítamente más fácil de resolver revisando con
+   atención al momento de leer las preasignaciones.
+18)Se presta a mucha confusión el tema del exceso de capacidad
+   como porcentaje. Sería bueno dejarlo configurable y que se
+   pueda elegir entre eso y cantidad fija de asientos.
+19) Confirmar que tome como un cero si hay un blanco en el espacio extra a saturar un aula, y  
+    que haya otros valores raros en las filas, como una coma en el nombre de los docentes, o 
+    cosas así.
+
+ 

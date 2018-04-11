@@ -1,0 +1,25 @@
+# Datos del problema
+# ------------------
+
+# Archivo de asignaciones
+archivo_asignaciones = pedidosPrueba.xls
+
+# Archivo de aula
+archivo_aulas = pedidosPrueba.xls
+
+# Archivo de preasignaciones
+archivo_preasignadas = pedidosPrueba.xls
+
+formato_fecha = mm/dd/aaaa
+#formato_fecha = dd/mm/aaaa
+
+# Tiempo máximo de procesamiento, medido en minutos.
+minutosDeProcesamiento = 60
+
+#PreProcesador.eliminarAulasInactivas = si
+PreProcesador.eliminarAsignacionesSinInscriptos = no
+PreProcesador.eliminarAsignacionesSinAulaUsable = no
+# para exactas no funciona el redondeo de horarios
+#PreProcesador.redondearHorarios = si 
+PreProcesador.redondearHorarios = no
+PreProcesador.asignacionMinimaEnMinutos = 60

@@ -1,0 +1,54 @@
+Escribiendo formulación...
+- función objetivo... 
+- restricciones de un aula por clase...
+- restricciones de aulas compatibles (por cliques)... 
+- restricciones de preasignacion... (0)
+- restricciones de conservacion de aula... 
+- variables...
+IBM ILOG License Manager: "IBM ILOG Optimization Suite for Academic Initiative" is accessing CPLEX 12 with option(s): "e m b q ".
+Tried aggregator 1 time.
+MIP Presolve eliminated 1809 rows and 20 columns.
+Reduced MIP has 51754 rows, 14850 columns, and 197834 nonzeros.
+Reduced MIP has 14850 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time =    0.71 sec.
+Clique table members: 2332.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 2 threads.
+Root relaxation solution time =  337.60 sec.
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer     Best Node    ItCnt     Gap
+
+*     0+    0                     -2012900.0000                  33117     --- 
+      0     0    -6654.6816  2506 -2012900.0000    -6654.6816    33117   99.67%
+*     0+    0                       -54758.0000    -6654.6816    33117   87.85%
+      0     0    -6716.1321  2611   -54758.0000     Cuts: 251    61230   87.73%
+      0     0    -6742.6187  2674   -54758.0000  ZeroHalf: 59    87083   87.69%
+*     0+    0                       -38574.0000    -6742.6187    87083   82.52%
+      0     0    -6796.6814  2728   -38574.0000  ZeroHalf: 46   115067   82.38%
+      0     0    -6823.5471  2584   -38574.0000  ZeroHalf: 48   136851   82.31%
+      0     0    -6842.4396  2681   -38574.0000  ZeroHalf: 46   161131   82.26%
+      0     0    -6859.1450  2816   -38574.0000  ZeroHalf: 35   184559   82.22%
+      0     0    -6875.2166  2860   -38574.0000  ZeroHalf: 30   204602   82.18%
+      0     0    -6896.4720  2790   -38574.0000  ZeroHalf: 26   222809   82.12%
+      0     0    -6911.2071  2711   -38574.0000  ZeroHalf: 29   242159   82.08%
+*     0+    0                       -20084.0000    -6911.2071   242159   65.59%
+      0     0    -6921.2199  2834   -20084.0000  ZeroHalf: 25   258537   65.54%
+      0     0    -6932.0750  2728   -20084.0000  ZeroHalf: 21   274132   65.48%
+
+Zero-half cuts applied:  230
+Gomory fractional cuts applied:  10
+
+Root node processing (before b&c):
+  Real time             = 3605.37
+Parallel b&c, 2 threads:
+  Real time             =    0.00
+  Sync time (average)   =    0.00
+  Wait time (average)   =    0.00
+                          -------
+Total (root+branch&cut) = 3605.37 sec.
+clasesAsignadas=493
+clasesNoAsignadas=14
+alumnosAsignados=19970
+alumnosNoAsignados=159
