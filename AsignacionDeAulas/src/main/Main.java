@@ -1,8 +1,10 @@
-package presentacion;
+package main;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import CSV.module.CSVParser;
+import CSV.module.CSVReader;
 import negocio.CalculadorHistograma;
 import negocio.Histograma;
 import negocio.Solicitud;
