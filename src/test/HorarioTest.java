@@ -6,7 +6,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import negocio.Horario;
+import domain.Horario;
 
 public class HorarioTest {
 	

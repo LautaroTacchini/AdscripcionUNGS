@@ -1,11 +1,13 @@
-package presentacion;
+package main;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import negocio.CalculadorHistograma;
+import core.CalculadorHistograma;
+import csv.module.CSVParser;
+import csv.module.CSVReader;
+import domain.Solicitud;
 import negocio.Histograma;
-import negocio.Solicitud;
 
 public class Main {
 	
@@ -16,7 +18,7 @@ public class Main {
 		CalculadorHistograma ch = new CalculadorHistograma(histograma);
 	
 		CSVParser parser = new CSVParser(solicitudes);
-		CSVReader reader = new CSVReader("pedidos.csv",parser);
+		CSVReader reader = new CSVReader("instancias/pedidos2017-1.csv",parser);
 		try {
 			reader.read();
 		} catch (IOException e) {

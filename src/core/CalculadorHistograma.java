@@ -1,6 +1,8 @@
-package negocio;
+package core;
 import java.util.ArrayList;
 import java.util.List;
+
+import negocio.Histograma;
 
 public class CalculadorHistograma {
 	private Histograma histograma;
@@ -41,7 +43,7 @@ public class CalculadorHistograma {
 	// dias de la semana.
 	public List<String> solicitudesSemanales() {
 		List<String> ret = new ArrayList<>();
-		String[] arrayDias = {"Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"};
+		String[] arrayDias = {"Lunes","Martes","Miï¿½rcoles","Jueves","Viernes","Sï¿½bado"};
 		for (String s : arrayDias) {
 			ret.add(histograma.mostrarSolicitudesPorHorario(s)+"\n");
 		}
@@ -63,7 +65,7 @@ public class CalculadorHistograma {
 	// horarios mas solicitados de cada dia.
 	public List<String> hrMasSolicitadaPorDia() {
 		List<String> ret = new ArrayList<>();
-		String[] arrayDias = {"Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"};
+		String[] arrayDias = {"Lunes","Martes","Miï¿½rcoles","Jueves","Viernes","Sï¿½bado"};
 		for (String s : arrayDias) {
 			ret.add(mostrarHrMasSolicitada(s)+"\n");
 		}

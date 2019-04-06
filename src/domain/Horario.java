@@ -1,4 +1,4 @@
-package negocio;
+package domain;
 
 public class Horario implements Comparable<Horario>{
 	private int hora;

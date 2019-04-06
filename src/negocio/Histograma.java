@@ -5,6 +5,9 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+import domain.Horario;
+import domain.Solicitud;
+
 public class Histograma {
 	
 	public List<Solicitud> solicitudes;

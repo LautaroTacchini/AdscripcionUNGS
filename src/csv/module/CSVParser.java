@@ -1,8 +1,8 @@
-package presentacion;
+package csv.module;
 import java.util.List;
 
-import negocio.Horario;
-import negocio.Solicitud;
+import domain.Horario;
+import domain.Solicitud;
 
 public class CSVParser {
 	List<Solicitud> solicitudes;

@@ -1,4 +1,4 @@
-package negocio;
+package domain;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
@@ -12,7 +12,7 @@ public class Solicitud {
 	private Horario hrIni;
 	private Horario hrFin;
 	
-	static String[] arrayDias = {"Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"};
+	static String[] arrayDias = {"Domingo","Lunes","Martes","Miï¿½rcoles","Jueves","Viernes","Sï¿½bado"};
 	static Set<String> dias = new HashSet<>(Arrays.asList(arrayDias));
 		
 	// Representa la solicitud de una materia para ser dictada un dia

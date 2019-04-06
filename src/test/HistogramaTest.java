@@ -3,6 +3,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import domain.Solicitud;
+
 public class HistogramaTest {
 	//Histograma histograma = new Histograma();
 	
